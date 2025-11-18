@@ -25,7 +25,7 @@ export function TaskList({
           key={t.id}
           task={t}
           propertyTitle={propertyMap?.get(t.propertyId)}
-          assignedToName={t.assignedTo ? userMap?.get(t.assignedTo) : undefined}
+          assignedToName={t.assignedToId ? userMap?.get(t.assignedToId) : undefined}
           onToggleStatus={onToggleStatus}
         />
       ))}
