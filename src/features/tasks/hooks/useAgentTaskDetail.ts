@@ -14,7 +14,7 @@ export function useAgentTaskDetail(taskId: string) {
     title: "",
     description: "",
     dueDate: null,
-    status: undefined,
+    isCompleted: undefined,
   });
 
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +32,7 @@ export function useAgentTaskDetail(taskId: string) {
           title: data.title,
           description: data.description,
           dueDate: data.dueDate ?? null,
-          status: data.status,
+          isCompleted: data.isCompleted,
         });
         setError(null);
       } catch (err) {

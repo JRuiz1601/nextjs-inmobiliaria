@@ -14,8 +14,8 @@ export function useAdminTaskDetail(taskId: string) {
     title: "",
     description: "",
     dueDate: null,
-    status: undefined,
-    assignedTo: null,
+    isCompleted: undefined,
+    assignedToId: null,
   });
 
   const [isLoading, setIsLoading] = useState(true);
@@ -33,8 +33,8 @@ export function useAdminTaskDetail(taskId: string) {
           title: data.title,
           description: data.description,
           dueDate: data.dueDate ?? null,
-          status: data.status,
-          assignedTo: data.assignedTo ?? null,
+          isCompleted: data.isCompleted,
+          assignedToId: data.assignedToId ?? null,
         });
         setError(null);
       } catch (err) {
